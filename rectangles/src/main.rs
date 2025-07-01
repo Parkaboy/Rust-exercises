@@ -1,11 +1,19 @@
-fn main() {
-
-let rectacngle = (3, 5);
-
-
-    println!("The area of the rectacngle is {} square pixels.", area(width, height));
+struct Rectangle {
+    width: u32,
+    height: u32,
 }
 
-fn area(dimensions: (u32, u32)) -> u32 {
-    dimensions.0 * dimensions.1
+
+fn main() {
+
+
+
+let rectacngle = Rectangle { width: 3, height: 5 };
+
+
+    println!("The area of the rectacngle is {} square pixels.", area(&rectacngle));
+}
+
+fn area(rectangle: &Rectangle) -> u32 {
+    rectangle.width * rectangle.height
 }
