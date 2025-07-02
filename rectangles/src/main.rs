@@ -3,15 +3,16 @@ struct Rectangle {
     height: u32,
 }
 
-
 fn main() {
+    let rectacngle = Rectangle {
+        width: 3,
+        height: 5,
+    };
 
-
-
-let rectacngle = Rectangle { width: 3, height: 5 };
-
-
-    println!("The area of the rectacngle is {} square pixels.", area(&rectacngle));
+    println!(
+        "The area of the rectacngle is {} square pixels.",
+        area(&rectacngle)
+    );
 }
 
 fn area(rectangle: &Rectangle) -> u32 {
